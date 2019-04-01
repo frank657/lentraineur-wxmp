@@ -1,12 +1,33 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/trainings/index/index",
+    "pages/trainings/new/new",
+    "pages/users/show/show"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
-  }
+  },
+ "tabBar": {
+  "backgroundColor": "white",
+  "selectedColor": "#32AAE1",
+  "borderStyle": "black",
+  "color": "black",
+  "list": [
+    {
+      "pagePath": "pages/trainings/index/index",
+      "text": "Find training"
+    },
+    {
+      "pagePath": "pages/trainings/new/new",
+      "text": "Bookings"
+    },
+    {
+    "pagePath": "pages/users/show/show",
+    "text": "Profile"
+    }
+  ]
+}
 }
