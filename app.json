@@ -2,6 +2,7 @@
   "pages":[
     "pages/home/home",
     "pages/trainings/index/index",
+    "pages/trainings/show/show",
     "pages/trainings/new/new",
     "pages/users/show/show"
   ],
