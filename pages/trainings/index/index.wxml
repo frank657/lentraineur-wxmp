@@ -2,3 +2,12 @@
 <form>
   <input name="input" placeholder='Try "basketball"' />
 </form>
+
+<view class="card-product">
+  <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"></image>
+  <view class="card-product-infos">
+    <text>Product name</text>
+    <text>Product description with relevant info only.</text>
+  </view>
+</view>
+
