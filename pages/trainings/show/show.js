@@ -1,13 +1,12 @@
-// pages/trainings/index/index.js
+// pages/trainings/show/show.js
 const app = getApp();
-
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    
+
   },
 
   /**
@@ -16,17 +15,17 @@ Page({
   onLoad: function (options) {
     const page = this;
     const url = app.globalData.url;
+    console.log('options', options)
     wx.request({
-      url: `${url}trainings`,
+      url: `${url}trainings/${options.id}`,
       method: 'GET',
       success(res) {
-        const trainings = res.data.trainings;
-        page.setData({
-          trainings: trainings
-        });
+        const training = res.data;
+        page.setData(training);
       }
     })
   },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -75,4 +74,5 @@ Page({
   onShareAppMessage: function () {
 
   }
+
 })
