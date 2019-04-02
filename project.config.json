@@ -37,13 +37,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "training-index",
 					"pathName": "pages/trainings/index/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
 					"scene": null
 				}
 			]

@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/trainings/index/index",
     "pages/trainings/new/new",
     "pages/users/show/show"
