@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
-	"appid": "wx5007be60b593f7b5",
+	"appid": "wx35d444e966855f0d",
 	"projectname": "lentraineur-wxmp",
 	"debugOptions": {
 		"hidedInDevtools": []
