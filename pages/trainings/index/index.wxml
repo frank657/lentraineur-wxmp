@@ -1,7 +1,79 @@
 <!--pages/trainings/index/index.wxml-->
+<view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.studyrama.com/IMG/arton1337.png');">
+<text>L'entraineur</text>
 <form>
   <input name="input" placeholder='Try "basketball"' />
 </form>
+</view>
+
+<view class="sports">
+  <view class="border">
+    <text>Sports</text>
+  </view>
+  <scroll-view class="scroll-view" scroll-x>
+    <view class='scroll-row'>
+      <view id="pic1" class="scroll-view-item_H bc_1">
+        <view class="card-sport">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1485908953667-cf6d88997642?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80"></image>
+          <text>Tennis</text>
+        </view>
+      </view>
+      <view id="pic2"  class="scroll-view-item_H bc_2">
+        <view class="card-sport">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1519317245869-d6943e4a4f9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"></image>
+          <text>Fitness</text>
+        </view>
+      </view>
+      <view id="pic3" class="scroll-view-item_H bc_3">
+        <view class="card-sport">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1067&q=80"></image>
+          <text>Basketball</text>
+        </view>
+      </view>
+     <view id="pic4" class="scroll-view-item_H bc_4">
+        <view class="card">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></image>
+          <text>Boxing</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<view class="activities">
+   <view class="border">
+    <text>Featured Activities</text>
+  </view>
+  <scroll-view class="scroll-view" scroll-x>
+    <view class='scroll-row'>
+      <view id="pic1" class="scroll-view-item_H bc_1">
+        <view class="card-sport">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1530915365347-e35b749a0381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></image>
+          <text>Tennis Master</text>
+        </view>
+      </view>
+      <view id="pic2"  class="scroll-view-item_H bc_2">
+        <view class="card-sport">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80"></image>
+          <text>Fit&Active</text>
+        </view>
+      </view>
+      <view id="pic3" class="scroll-view-item_H bc_3">
+        <view class="card-sport">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1505666287802-931dc83948e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"></image>
+          <text>NBA</text>
+        </view>
+      </view>
+      <view id="pic4" class="scroll-view-item_H bc_4">
+        <view class="card">
+          <image mode="aspectFill" src="https://www.studyrama.com/IMG/arton1337.png"></image>
+          <text>Boxing Champ</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
 
 <view class='page'>
   <view class='page__bd'>
@@ -11,7 +83,7 @@
       <block wx:for='{{trainings}}' wx:for-item='training' wx:key='training.id'>
         <navigator url="../show/show?id={{training.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-              <image class="weui-media-box__thumb" src="{{icon60}}" />
+              <image mode="aspectFill" class="weui-media-box__thumb" src="https://www.studyrama.com/IMG/arton1337.png" />
           </view>
           <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{training.title}}</view>
@@ -21,7 +93,7 @@
       </block>
       <view class="weui-panel__ft">
                 <view class="weui-cell weui-cell_access weui-cell_link">
-                    <view class="weui-cell__bd">查看更多</view>
+                    <view class="weui-cell__bd">load more</view>
                     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                 </view>
             </view>
