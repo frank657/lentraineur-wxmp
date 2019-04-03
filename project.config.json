@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
-	"appid": "wx35d444e966855f0d",
+	"appid": "wx9ce47de2f992b366",
 	"projectname": "lentraineur-wxmp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -50,6 +50,13 @@
 					"id": -1,
 					"name": "home",
 					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "trainings-new",
+					"pathName": "pages/trainings/new/new",
 					"scene": null
 				}
 			]
