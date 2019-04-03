@@ -1,1 +1,107 @@
 /* pages/users/show/show.wxss */
+.banner {
+  color: white;
+  text-align: center;
+  height: 25vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon{
+  width: 20px;
+  height: 20px;
+}
+
+.avatar-bordered {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  margin-right: 5px;
+}
+
+.card-menu-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  /* background: black; */
+  text-align: center;
+  /* min-height: 150px; */
+}
+
+.card-menu {
+  background: #846075;
+  border: solid 1px white;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+  width: 30vh;
+  height: 60px;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-training-list-wrapper {
+  padding: 15px;
+}
+
+.section-training-list-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* border-bottom: solid 1px rgba(0,0,0,0.1); */
+}
+
+.section-training-list {
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+  padding: 5px 0px 5px 0px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.section-training-list-header .h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.section-training-list .h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section-training-list .p {
+  font-size: 12px;
+}
+
+.avatar-square {
+  width: 100px;
+  height: 80px;
+  border-radius: 0px;
+  object-fit: cover;
+  /* box-shadow: 0 1px 2px rgba(0,0,0,0.2); */
+  /* border: black 1px solid; */
+}
+
+.training-content {
+  margin-left:5px;
+}
+
+.training-edit-delete {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: flex-end; */
+  /* align-items: flex-start; */
+  height: 100%;
+  margin-left: 5px;
+}
+
+.text-edit-delete {
+  font-size: 10px;
+  margin-left: 5px;
+  font-weight: bold;
+}

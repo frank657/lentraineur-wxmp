@@ -1,4 +1,4 @@
-// pages/users/show/show.js
+// pages/users/edit/edit.js
 const app = getApp();
 Page({
 
@@ -14,19 +14,15 @@ Page({
    */
   onLoad: function (options) {
     const page = this;
-    console.log('options: ', options);
     const url = app.globalData.url;
-    const user_id = 30; // static user_id for testing;
+    console.log('options', options)
 
     wx.request({
-      // url: `${url}users/${options.id}`,
-      url: `${url}users/${user_id}`, // static user_id for testing purposes 
+      url: `${url}users/${options.id}`,
       method: 'GET',
       success(res) {
-        console.log('user res', res);
+        console.log(res);
         const user = res.data;
-        console.log('user', user)
-        // console.log
         page.setData(user);
       }
     })
@@ -79,22 +75,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  editTraining(e) {
-    const data = e.currentTarget.dataset;
-    console.log('e', e)
-    console.log('const data', data)
-
-    wx.navigateTo({
-      url: `/pages/trainings/edit/edit?id=${data.id}`
-    });
-  },
-
-  addTraining(e) {
-    console.log(e)
-    wx.navigateTo({
-      url: `/pages/trainings/`
-    })
   }
 })
