@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/trainings/index/index",
     "pages/trainings/show/show",
@@ -7,32 +7,34 @@
     "pages/trainings/edit/edit",
     "pages/trainings/create/create",
     "pages/users/show/show",
-    "pages/users/edit/edit"
+    "pages/users/edit/edit",
+    "pages/reviews/index/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
- "tabBar": {
-  "backgroundColor": "white",
-  "selectedColor": "#32AAE1",
-  "borderStyle": "black",
-  "color": "black",
-  "list": [
-    {
-      "pagePath": "pages/trainings/index/index",
-      "text": "Find training"
-    },
-    {
-      "pagePath": "pages/trainings/new/new",
-      "text": "Bookings"
-    },
-    {
-    "pagePath": "pages/users/show/show",
-    "text": "Profile"
-    }
-  ]
-}
+  "tabBar": {
+    "backgroundColor": "white",
+    "selectedColor": "#32AAE1",
+    "borderStyle": "black",
+    "color": "black",
+    "list": [
+      {
+        "pagePath": "pages/trainings/index/index",
+        "text": "Find training"
+      },
+      {
+        "pagePath": "pages/trainings/new/new",
+        "text": "Bookings"
+      },
+      {
+        "pagePath": "pages/users/show/show",
+        "text": "Profile"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

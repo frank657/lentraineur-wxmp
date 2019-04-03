@@ -13,12 +13,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
-	"appid": "wxc76a06a4794c5415",
+	"appid": "wx35d444e966855f0d",
 	"projectname": "lentraineur-wxmp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -37,11 +39,11 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "training-index",
+					"id": 0,
+					"name": "trainings-index",
 					"pathName": "pages/trainings/index/index",
 					"query": "",
 					"scene": null
@@ -55,8 +57,9 @@
 				},
 				{
 					"id": -1,
-					"name": "User Show",
-					"pathName": "pages/users/show/show",
+					"name": "trainings-show",
+					"pathName": "pages/trainings/show/show",
+					"query": "",
 					"scene": null
 				}
 			]
