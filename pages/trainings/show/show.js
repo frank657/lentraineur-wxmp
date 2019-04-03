@@ -15,7 +15,6 @@ Page({
   onLoad: function (options) {
     const page = this;
     const url = app.globalData.url;
-    console.log('options', options)
     wx.request({
       url: `${url}trainings/${options.id}`,
       method: 'GET',

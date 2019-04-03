@@ -19,6 +19,8 @@
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -37,11 +39,11 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "training-index",
+					"id": 0,
+					"name": "trainings-index",
 					"pathName": "pages/trainings/index/index",
 					"query": "",
 					"scene": null
@@ -55,8 +57,9 @@
 				},
 				{
 					"id": -1,
-					"name": "trainings-new",
-					"pathName": "pages/trainings/new/new",
+					"name": "trainings-show",
+					"pathName": "pages/trainings/show/show",
+					"query": "",
 					"scene": null
 				}
 			]
