@@ -31,3 +31,63 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 150px;
+  background-size: cover !important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner form {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.banner > text {
+  margin-bottom: 20px;
+}
+
+.scroll-view {
+  margin-bottom: 15px;
+}
+
+.scroll-row {
+  display: flex;
+  flex-direction: row;
+  width: 680px;
+  position: relative;
+  margin-right: right;
+}
+
+.scroll-view-item_H image {
+  width: 150px;
+  height: 150px;
+}
+
+.bc_1 {
+  margin-left: 15px;
+}
+
+.card-sport,
+card-activity {
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0,.06);
+  overflow: hidden;
+  width: 150px;
+  margin-right: 15px;
+  border-radius: 5px;
+  height: 180px;
+}
+
+.border {
+  border-bottom: 1px solid black;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
