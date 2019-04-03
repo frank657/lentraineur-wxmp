@@ -1,1 +1,15 @@
 /* pages/trainings/new/new.wxss */
+.h2-header {
+ color: black;
+  font-size: 40rpx; 
+  font-weight: bold;
+  padding: 15px;}
+
+.user-input {
+  width: 100%;
+  margin-bottom: 15rpx;}
+
+.input-height {
+  height: 3em;
+}
+

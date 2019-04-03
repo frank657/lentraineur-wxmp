@@ -1,4 +1,5 @@
 // pages/trainings/new/new.js
+const app = getApp();
 Page({
 
   /**
@@ -17,13 +18,15 @@ Page({
 
     let training = { title: title, price_per_hour: price_per_hour, location: location, min_start_time: min_start_time, max_end_time: max_end_time }
 
+    const url = app.globalData.url;
+    let id = this.data.id;
     wx.request({
-      url: 'http://localhost:3001/api/v1/trainings',
+      url: `${url}trainings`,
       method: "POST",
       data: training,
       success() {
         wx.redirectTo({
-          url: '/pages/trainings/show'
+          url: `../pages/trainings/show/show?id=${id}`
         });
       }
     });   
