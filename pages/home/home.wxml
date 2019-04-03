@@ -1,2 +1,2 @@
 <!--pages/home/home.wxml-->
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="trainingsIndex" data-id="{{globalData.userId}}">Login</button>

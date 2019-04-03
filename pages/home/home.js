@@ -70,5 +70,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  trainingsIndex() {
+    console.log(app.globalData.userId)
+    wx.switchTab({
+      // url: `../users/show/show?id=${app.globalData.userId}`,
+      url: `../trainings/index/index`
+    })
   }
 })

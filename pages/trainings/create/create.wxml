@@ -1,2 +1,16 @@
-<!--pages/trainings/create/create.wxml-->
-<text>pages/trainings/create/create.wxml</text>
+<!--pages/trainings/new/new.wxml-->
+<!-- <text>pages/trainings/new/new.wxml</text> -->
+
+<view class="header">
+<view class="h2-header">Create your Training Service here!</view>
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  
+  <view><label>Title</label><input class="user-input input-height" name= "title" placeholder="What is your Title"></input></view>
+  <view><label>Price</label><input class="user-input input-height" name="price_per_hour" placeholder="Training charges per hour"></input></view>
+  <view><label>Location</label><input class="user-input input-height" name="location" placeholder="Available in which location"></input></view>
+  <view><label>Start Time</label><input class="user-input input-height" name="min_start_time" placeholder="When does it start"></input></view>
+  <view><label>End Time</label><input class="user-input input-height" name="max_end_time" placeholder="When does it finish"></input></view>
+    <button style="margin-bottom:50px" type="primary" formType="submit" loading="{{loading}}">Submit</button>
+</form>
