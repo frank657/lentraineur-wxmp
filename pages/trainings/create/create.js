@@ -1,4 +1,5 @@
 // pages/trainings/create/create.js
+const app = getApp();
 Page({
 
   /**
@@ -62,5 +63,30 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  formSubmit: function (event) {
+    let title = event.detail.value.title
+    let price_per_hour = event.detail.value.price_per_hour
+    let location = event.detail.value.location
+    let min_start_time = event.detail.value.min_start_time
+    let max_end_time = event.detail.value.max_end_time
+
+    let training = { title: title, price_per_hour: price_per_hour, location: location, min_start_time: min_start_time, max_end_time: max_end_time }
+
+    const url = app.globalData.url;
+    // let id = this.data.id;
+
+    wx.request({
+      url: `${url}trainings?user_id=${app.globalData.userId}`,
+      method: "POST",
+      data: training,
+      success(res) {
+        console.log(res);
+        wx.redirectTo({
+          url: `../show/show?id=${res.data.id}`
+        });
+      }
+    });
   }
 })
