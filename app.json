@@ -4,7 +4,8 @@
     "pages/trainings/index/index",
     "pages/trainings/show/show",
     "pages/trainings/new/new",
-    "pages/users/show/show"
+    "pages/users/show/show",
+    "pages/reviews/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

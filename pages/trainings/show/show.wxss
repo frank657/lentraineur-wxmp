@@ -6,6 +6,13 @@
   background-size: cover;
 }
 
+.image-map{
+  background-image: url('https://c2.staticflickr.com/8/7005/26700852860_911efd5a0e_o.jpg');
+  height: 240px;
+  width: 100vw;
+  background-size: cover;
+}
+
 .text-title {
   text-align: center;
   font-weight: bold;
@@ -13,6 +20,14 @@
 }
 
 .text-description {
-  font-size: 16px;
   padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+.text-size {
+  font-size: 16px;
+}
+
+.title-location {
+  padding-bottom: 8px;
 }
