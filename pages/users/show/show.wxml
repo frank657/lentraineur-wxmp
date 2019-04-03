@@ -1,2 +1,62 @@
 <!--pages/users/show/show.wxml-->
-<text>pages/users/show/show.wxml</text>
+<view class="header">
+  
+  <!-- BANNER -->
+  <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1526403646408-57b94dc15399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+    <view class='avatar'>
+      <image class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer"></image>
+    </view>
+    <view class="h1">{{first_name}} {{last_name}}</view>
+  </view>
+
+  <!-- EDIT PROFILE ADD TRAINING BUTTONS -->
+  <view class='card-menu-wrapper'>
+    <navigator url='../edit/edit?id={{user.id}}'>
+      <view class='card-menu'>
+        Edit Profile
+      </view>
+    </navigator>
+    <navigator url='../../trainings/create/create'>
+      <view class='card-menu'>
+        Add Training
+      </view>
+    </navigator>   
+  </view>
+
+  <!-- LIST OF TRAININGS -->
+  <view class='section-training-list-header'>
+    <text class='h1'>My Trainings</text>
+  </view>
+
+  <view class='section-training-list-wrapper'>
+    <view class='section-training-list' wx:for="{{trainings}}" wx:for-item="training" wx:key="training.id" data-training="{{training}}">
+      <view class='training-image'>
+        <image class="avatar-square" alt="avatar-bordered" src='{{training.image}}'></image>
+      </view>
+      <view class='training-content'>
+        <view class='h2'>{{training.title}}</view>
+        <view class='p'>{{training.description}}</view>        
+      </view>
+      <view class='training-edit-delete'>
+        <image src="/image/edit.png" class="icon" bindtap="editTraining"
+          data-id="{{training.id}}"></image>
+          <!--  -->          
+      </view>
+      
+    </view>
+  </view>
+
+
+
+<!-- MAIN CLOSING TAG     -->
+</view>
+
+
+
+<!-- <view class="controls">
+        <image src="/image/edit.png" class="icon" bindtap="editRestaurant"
+          data-id="{{id}}" />
+
+        <image src="/image/recycling-bin.png" class="icon"
+          bindtap="deleteRestaurant" data-id="{{id}}" />
+      </view> -->

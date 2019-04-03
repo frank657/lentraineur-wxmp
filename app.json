@@ -4,7 +4,10 @@
     "pages/trainings/index/index",
     "pages/trainings/show/show",
     "pages/trainings/new/new",
-    "pages/users/show/show"
+    "pages/trainings/edit/edit",
+    "pages/trainings/create/create",
+    "pages/users/show/show",
+    "pages/users/edit/edit"
   ],
   "window":{
     "backgroundTextStyle":"light",
