@@ -16,11 +16,11 @@
         Edit Profile
       </view>
     </navigator>
-    <navigator url='../../trainings/create/create'>
-      <view class='card-menu'>
+    <!-- <navigator url='../../trainings/create/create'> -->
+      <view class='card-menu' bindtap="addTraining">
         Add Training
       </view>
-    </navigator>   
+    <!-- </navigator>    -->
   </view>
 
   <!-- LIST OF TRAININGS -->

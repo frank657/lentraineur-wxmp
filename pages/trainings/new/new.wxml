@@ -2,7 +2,7 @@
 <!-- <text>pages/trainings/new/new.wxml</text> -->
 
 <view class="header">
-<view class="h2-header">Create your Training Service here!</view>
+<view class="h2-header">Add new training</view>
 </view>
 
 <form bindsubmit="formSubmit" bindreset="formReset">
