@@ -1,7 +1,6 @@
-// pages/home/home.js
-const app = getApp()
-
+// pages/schedule/new/new.js
 Page({
+
   /**
    * Page initial data
    */
@@ -16,20 +15,6 @@ Page({
 
   },
 
-  getUserInfo: function (e) {
-    console.log(22, e)
-    app.globalData.userInfo = e.detail.userInfo
-    console.log('globalData', app.globalData.userInfo)
-      // console.log(app.globalData.userInfo)
-    
-    this.setData({
-      userInfo: e.detail.userInfo
-    })
-     wx.switchTab({
-      // url: `../users/show/show?id=${app.globalData.userId}`,
-      url: `../trainings/index/index`
-    })
-  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -77,16 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  trainingsIndex() {
-    console.log(33, app)
-    console.log('userId', app.globalData.userId);
-    console.log('userInfo', app.globalData.userInfo);
-    console.log('this.userInfo', this.userInfo)
-    // wx.switchTab({
-    //   // url: `../users/show/show?id=${app.globalData.userId}`,
-    //   url: `../trainings/index/index`
-    // })
   }
 })

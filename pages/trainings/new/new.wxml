@@ -2,7 +2,7 @@
 <!-- <text>pages/trainings/new/new.wxml</text> -->
 
 <view class="header">
-<view class="h2-header">Add new training</view>
+<view class="h2-header">Create your Training Service here!</view>
 </view>
 
 <form bindsubmit="formSubmit" bindreset="formReset">
@@ -13,6 +13,5 @@
   <view><label>Description</label><input class="user-input input-height" name= "description" placeholder="Describe your serice"></input></view>
   <view><label>Price</label><input class="user-input input-height" name="price_per_hour" placeholder="Training charges per hour"></input></view>
   <view><label>Location</label><input class="user-input input-height" name="location" placeholder="Available in which location"></input></view>
- 
-    <button style="margin-bottom:50px" type="primary" formType="submit" loading="{{loading}}">Submit</button>
+     <button style="margin-bottom:50px" type="primary" formType="submit" loading="{{loading}}">Submit</button>
 </form>

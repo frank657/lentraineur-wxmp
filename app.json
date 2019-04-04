@@ -5,6 +5,7 @@
     "pages/trainings/show/show",
     "pages/trainings/new/new",
     "pages/trainings/edit/edit",
+    "pages/schedule/new/new",
     "pages/users/show/show",
     "pages/users/edit/edit",
     "pages/reviews/index/index",

@@ -11,7 +11,9 @@ App ({
   
   onLaunch: function () {
     // const host = 'http://localhost:3001/api/v1/'
-    const host = 'http://localhost:3001/api/v1/'
+
+    const host = 'http://localhost:3000/api/v1/'
+    // const host = 'https://lentraineur.herokuapp.com/api/v1/'
 
     wx.login({
       success: (res) => {
