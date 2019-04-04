@@ -1,2 +1,4 @@
 <!--pages/trainings/edit/edit.wxml-->
 <text>pages/trainings/edit/edit.wxml</text>
+
+<navigator url='../../schedules/new/new?id={{training_id}}'>Add timeslot</navigator>

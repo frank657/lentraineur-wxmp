@@ -12,6 +12,10 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this;
+    page.setData({
+      training_id: options.id
+    });
 
   },
 
