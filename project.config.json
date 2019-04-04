@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -66,6 +66,13 @@
 					"id": -1,
 					"name": "trainings_create",
 					"pathName": "pages/trainings/new/new",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "schedules-new",
+					"pathName": "pages/schedules/new/new",
+					"query": "",
 					"scene": null
 				}
 			]
