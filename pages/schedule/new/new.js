@@ -1,7 +1,5 @@
-// pages/trainings/schedule/schedule.js
-const app = getApp();
+// pages/schedule/new/new.js
 Page({
-  
 
   /**
    * Page initial data
@@ -14,16 +12,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const page = this;
-    const url = app.globalData.url;
-    wx.request({
-      url: `${url}trainings/${options.id}`,
-      method: 'GET',
-      success(res) {
-        const training = res.data;
-        page.setData(training);
-      }
-    })
+
   },
 
   /**
