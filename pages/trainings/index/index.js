@@ -38,9 +38,10 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onShow: function (options) {
     const page = this;
     const url = app.globalData.url;
+    console.log("testindex")
     wx.request({
       url: `${url}trainings`,
       method: 'GET',
@@ -62,7 +63,7 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onLoad: function () {
 
   },
 

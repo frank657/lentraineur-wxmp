@@ -12,14 +12,14 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onShow: function (options) {
     console.log(33, app.globalData.userId)
     const page = this;
     console.log('options: ', options);
     const url = app.globalData.url;
     // const user_id = 30; // static user_id for testing;
     const id = app.globalData.userId;
-
+    console.log("test")
     wx.request({
       // url: `${url}users/${options.id}`,
       url: `${url}users/${id}`, // static user_id for testing purposes 
@@ -44,7 +44,7 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onLoad: function () {
 
   },
 
