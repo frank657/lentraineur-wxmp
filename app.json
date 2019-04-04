@@ -24,15 +24,21 @@
     "list": [
       {
         "pagePath": "pages/trainings/index/index",
-        "text": "Find training"
+        "text": "Find training",
+        "iconPath": "image/search.png",
+        "selectedIconPath": "image/search.png"
       },
       {
         "pagePath": "pages/bookings/index/index",
-        "text": "Bookings"
+        "text": "Bookings",
+        "iconPath": "image/booking1.png",
+        "selectedIconPath": "image/booking1.png"
       },
       {
         "pagePath": "pages/users/show/show",
-        "text": "Profile"
+        "text": "Profile",
+        "iconPath": "image/profile.png",
+        "selectedIconPath": "image/profile.png"
       }
     ]
   },

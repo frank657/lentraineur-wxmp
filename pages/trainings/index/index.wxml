@@ -1,10 +1,22 @@
 <!--pages/trainings/index/index.wxml-->
 <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.studyrama.com/IMG/arton1337.png');">
 <text>L'entraineur</text>
-<form>
-  <input name="input" placeholder='Try "basketball"' />
-</form>
+
+<view class="page__bd">
+  <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <icon  bindsubmit="tagButtonInput" bindtap="tagButtonInput" class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input name="tag" type="text" id="search" class="weui-search-bar__input" placeholder="Basketball..." value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping"/>
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
+            </view>
+          </view>
+      </view>
+  </view>
 </view>
+</view>
+
 
 <view class="sports">
   <view class="border">
@@ -82,14 +94,17 @@
      <view class='weui-panel__bd'>
       <block wx:for='{{trainings}}' wx:for-item='training' wx:key='training.id'>
         <navigator url="../show/show?id={{training.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-              <image mode="aspectFill" class="weui-media-box__thumb" src="https://www.studyrama.com/IMG/arton1337.png" />
-          </view>
-          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="card-training">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image src="{{training.image}}"></image>
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{training.title}}</view>
               <view class="weui-media-box__desc">{{training.description}}</view>
+              <view class="weui-media-box__price">Price/h: {{training.price_per_hour}}</view>
+            </view>
           </view>
-          </navigator>
+        </navigator>
       </block>
       <view class="weui-panel__ft">
                 <view class="weui-cell weui-cell_access weui-cell_link">

@@ -2,14 +2,51 @@
 const app = getApp();
 var order = ['pic1', 'pic2', 'pic3', 'pic4']
 Page({
-
+  tagButtonInput: function (e) {
+    let tag = e.detail.value.tag
+    const url = app.globalData.url
+    const page = this;
+    wx.request({
+      url: `${url}trainings?tag=${tag}`,
+      success(res){
+        page.setData(
+          res.data
+        );
+      }
+    })
+  },
   /**
    * Page initial data
    */
   data: {
     toView: 'pic1',
-    scrollTop: 100
+    scrollTop: 100, 
+    inputShowed: false,
+    inputVal: ""
   },
+
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
+  },
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
+
   upper: function (e) {
     console.log(e)
   },
@@ -52,6 +89,7 @@ Page({
       }
     })
   },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
