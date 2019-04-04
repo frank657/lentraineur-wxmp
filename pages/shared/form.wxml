@@ -1,0 +1,36 @@
+<template name="form">
+
+
+<!-- <view class="header">
+<view class="h2-header">Offer a new training</view>
+</view> -->
+
+<view class='box'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <!-- INPUT FIELDS -->
+    <view><input class="user-input input-height" name= "title" value="{{title}}" placeholder="Title"></input></view>
+    <view><input class="user-input input-height" name= "description" value="{{description}}" placeholder="Description"></input></view>
+    <view><input class="user-input input-height" name= "category" value="{{category_list}}" placeholder="Category"></input></view>
+    <view><input class="user-input input-height" name="price_per_hour" value="{{price_per_hour}}" placeholder="Price/hour"></input></view>
+    <view><input class="user-input input-height" name="location" value="{{location}}" placeholder="Location"></input></view>
+
+    <!-- IMAGE UPLOAD -->
+    <view class='upload-preview'>
+      <view bindtap="takePhoto" class='icon-text'>
+        <image src='/image/upload-picture.png' class='icon'></image>
+        <text>Upload Image</text>
+      </view>
+      <view class='img-upload-preview' mode="aspecFill"  bindlongtap="imgLongTap">
+        <!-- <image class='img-upload-preview' src="{{photoUrl}}" mode="aspecFill"  bindlongtap="imgLongTap"></image> -->
+      </view>
+      
+    </view>
+
+    <!-- SUBMIT BUTTON -->
+    <button style="margin-bottom:20px" type="primary" formType="submit" loading="{{loading}}">Submit</button>
+  </form>
+</view>
+
+
+</template>

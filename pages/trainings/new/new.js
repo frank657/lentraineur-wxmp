@@ -38,8 +38,9 @@ Page({
     let location = event.detail.value.location   
     let user_id = app.globalData.userId
     let image = this.data.photoUrl
+    let category = event.detail.value.category
 
-    let training = { title: title, description: description, price_per_hour: price_per_hour, location: location,  user_id: user_id, image: image }
+    let training = { title: title, description: description, price_per_hour: price_per_hour, location: location,  user_id: user_id, image: image, category_list: category }
 
     console.log(training);
 
