@@ -85,7 +85,7 @@
       <block wx:for='{{trainings}}' wx:for-item='training' wx:key='training.id'>
         <navigator url="../show/show?id={{training.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-              <image mode="aspectFill" class="weui-media-box__thumb" src="https://www.studyrama.com/IMG/arton1337.png" />
+              <image mode="aspectFill" class="weui-media-box__thumb" src="{{training.image}}" />
           </view>
           <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{training.title}}</view>
