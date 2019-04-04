@@ -1,29 +1,37 @@
 // pages/users/show/show.js
 const app = getApp();
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
+    userInfo: app.globalData.userInfo
 
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onShow: function (options) {
     console.log(33, app.globalData.userId)
-    const page = this;
-    console.log('options: ', options);
+    const page = this;    
     const url = app.globalData.url;
     // const user_id = 30; // static user_id for testing;
     const id = app.globalData.userId;
-
+    const userInfo = app.globalData.userInfo;
+    console.log('nn', userInfo.nickName)
+    const avatarUrl = app.globalData.userInfo.avatarUrl;
+    console.log(avatarUrl)
+    const nickName = userInfo.nickName;
+    console.log("test")
     wx.request({
       // url: `${url}users/${options.id}`,
       url: `${url}users/${id}`, // static user_id for testing purposes 
-      method: 'GET',
+      // method: 'GET',
+      method: "PUT",
+      data: {profile_image: avatarUrl, username: nickName},
       success(res) {
         console.log('user res', res);
         const user = res.data;
@@ -44,7 +52,7 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onLoad: function () {
 
   },
 

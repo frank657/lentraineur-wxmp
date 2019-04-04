@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -63,16 +63,15 @@
 					"scene": null
 				},
 				{
-					"id": 3,
-					"name": "User Show",
-					"pathName": "pages/users/show/show",
-					"query": "",
+					"id": -1,
+					"name": "trainings_create",
+					"pathName": "pages/trainings/new/new",
 					"scene": null
 				},
 				{
-					"id": 4,
-					"name": "Training new",
-					"pathName": "pages/trainings/new/new",
+					"id": -1,
+					"name": "schedules-new",
+					"pathName": "pages/schedules/new/new",
 					"query": "",
 					"scene": null
 				}

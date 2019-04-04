@@ -1,4 +1,6 @@
 <!--pages/trainings/index/index.wxml-->
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
 <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.studyrama.com/IMG/arton1337.png');">
 <text>L'entraineur</text>
 
