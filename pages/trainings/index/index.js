@@ -3,7 +3,8 @@ const app = getApp();
 var order = ['pic1', 'pic2', 'pic3', 'pic4']
 Page({
   tagButtonInput: function (e) {
-    let tag = e.detail.value.tag
+    console.log(e)
+    let tag = e.currentTarget.dataset.tag
     const url = app.globalData.url
     const page = this;
     wx.request({
