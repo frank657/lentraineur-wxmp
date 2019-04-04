@@ -96,7 +96,7 @@ Page({
   addTraining(e) {
     console.log(e)
     wx.navigateTo({
-      url: `/pages/trainings/`
+      url: `/pages/trainings/new/new`
     })
   }
 })
