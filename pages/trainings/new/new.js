@@ -13,8 +13,6 @@ Page({
     let title = event.detail.value.title
     let price_per_hour = event.detail.value.price_per_hour
     let location = event.detail.value.location
-    // let min_start_time = event.detail.value.min_start_time
-    // let max_end_time = event.detail.value.max_end_time
 
     let training = { title: title, price_per_hour: price_per_hour, location: location }
 
