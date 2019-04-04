@@ -1,26 +1,51 @@
 // pages/trainings/new/new.js
 const app = getApp();
+ const AV = require('../../../utils/av-weapp-min.js');
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
+    photoUrl: ''
+  },
 
+  takePhoto: function () {
+    let page = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePath = res.tempFilePaths[0];
+        page.setData({ photoUrl: res.tempFilePaths[0]});
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(
+          file => console.log(file.url())
+        ).catch(console.error);
+      } 
+    });
   },
 
   formSubmit: function (event) {
     let title = event.detail.value.title
+    let description = event.detail.value.description
     let price_per_hour = event.detail.value.price_per_hour
-    let location = event.detail.value.location
+    let location = event.detail.value.location   
+    let user_id = app.globalData.userId
+    let image = this.data.photoUrl
 
-    let training = { title: title, price_per_hour: price_per_hour, location: location }
+    let training = { title: title, description: description, price_per_hour: price_per_hour, location: location,  user_id: user_id, image: image }
+
+    console.log(training);
 
     const url = app.globalData.url;
-    // let id = this.data.id;
-
     wx.request({
-      url: `${url}trainings?user_id=${app.globalData.userId}`,
+      url: `${url}trainings`,
       method: "POST",
       data: training,
       success(res) {
@@ -31,29 +56,6 @@ Page({
       }
     });
   },
-
-  // formSubmit: function(event) {
-  //   let title = event.detail.value.title
-  //   let price_per_hour = event.detail.value.price_per_hour
-  //   let location = event.detail.value.location
-  //   let min_start_time = event.detail.value.min_start_time
-  //   let max_end_time = event.detail.value.max_end_time
-
-  //   let training = { title: title, price_per_hour: price_per_hour, location: location, min_start_time: min_start_time, max_end_time: max_end_time }
-
-  //   const url = app.globalData.url;
-  //   let id = this.data.id;
-  //   wx.request({
-  //     url: `${url}trainings`,
-  //     method: "POST",
-  //     data: training,
-  //     success() {
-  //       wx.redirectTo({
-  //         url: `../pages/trainings/show/show?id=${id}`
-  //       });
-  //     }
-  //   });   
-  // },
 
   /**
    * Lifecycle function--Called when page load
@@ -110,4 +112,5 @@ Page({
   onShareAppMessage: function () {
 
   }
-})
+}) 
+
