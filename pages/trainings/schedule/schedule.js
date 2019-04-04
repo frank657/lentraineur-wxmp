@@ -1,6 +1,7 @@
-// pages/trainings/new/new.js
+// pages/trainings/schedule/schedule.js
 const app = getApp();
 Page({
+  
 
   /**
    * Page initial data
@@ -9,32 +10,20 @@ Page({
 
   },
 
-  formSubmit: function(event) {
-    let title = event.detail.value.title
-    let price_per_hour = event.detail.value.price_per_hour
-    let location = event.detail.value.location
-
-    let training = { title: title, price_per_hour: price_per_hour, location: location }
-
-    const url = app.globalData.url;
-    let id = this.data.id;
-    wx.request({
-      url: `${url}trainings`,
-      method: "POST",
-      data: training,
-      success() {
-        wx.redirectTo({
-          url: `../pages/trainings/show/show?id=${id}`
-        });
-      }
-    });   
-  },
-
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    const page = this;
+    const url = app.globalData.url;
+    wx.request({
+      url: `${url}trainings/${options.id}`,
+      method: 'GET',
+      success(res) {
+        const training = res.data;
+        page.setData(training);
+      }
+    })
   },
 
   /**
