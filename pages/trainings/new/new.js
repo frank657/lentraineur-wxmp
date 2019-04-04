@@ -15,8 +15,10 @@ Page({
     let location = event.detail.value.location
     let min_start_time = event.detail.value.min_start_time
     let max_end_time = event.detail.value.max_end_time
+    let user_id = app.globalData.userId
 
-    let training = { title: title, price_per_hour: price_per_hour, location: location, min_start_time: min_start_time, max_end_time: max_end_time }
+
+    let training = { title: title, price_per_hour: price_per_hour, location: location, min_start_time: min_start_time, max_end_time: max_end_time, user_id: user_id }
 
     const url = app.globalData.url;
     let id = this.data.id;
@@ -24,9 +26,10 @@ Page({
       url: `${url}trainings`,
       method: "POST",
       data: training,
-      success() {
+      success(res) {
+        const id = res.data.id
         wx.redirectTo({
-          url: `../pages/trainings/show/show?id=${id}`
+          url: `/pages/trainings/show/show?id=${id}`
         });
       }
     });   
