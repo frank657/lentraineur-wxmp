@@ -39,39 +39,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 1,
 			"list": [
 				{
 					"id": 0,
 					"name": "trainings-index",
 					"pathName": "pages/trainings/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "home",
-					"pathName": "pages/home/home",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "trainings-show",
-					"pathName": "pages/trainings/show/show",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "trainings_create",
-					"pathName": "pages/trainings/new/new",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "schedules-new",
-					"pathName": "pages/schedules/new/new",
 					"query": "",
 					"scene": null
 				}
