@@ -9,21 +9,20 @@ Page({
 
   },
 
-  formSubmit: function(event) {
+  formSubmit: function (event) {
     let title = event.detail.value.title
     let price_per_hour = event.detail.value.price_per_hour
     let location = event.detail.value.location
-    let min_start_time = event.detail.value.min_start_time
-    let max_end_time = event.detail.value.max_end_time
-    let user_id = app.globalData.userId
+    // let min_start_time = event.detail.value.min_start_time
+    // let max_end_time = event.detail.value.max_end_time
 
-
-    let training = { title: title, price_per_hour: price_per_hour, location: location, min_start_time: min_start_time, max_end_time: max_end_time, user_id: user_id }
+    let training = { title: title, price_per_hour: price_per_hour, location: location }
 
     const url = app.globalData.url;
-    let id = this.data.id;
+    // let id = this.data.id;
+
     wx.request({
-      url: `${url}trainings`,
+      url: `${url}trainings?user_id=${app.globalData.userId}`,
       method: "POST",
       data: training,
       success(res) {
@@ -32,8 +31,31 @@ Page({
           url: `/pages/trainings/show/show?id=${id}`
         });
       }
-    });   
+    });
   },
+
+  // formSubmit: function(event) {
+  //   let title = event.detail.value.title
+  //   let price_per_hour = event.detail.value.price_per_hour
+  //   let location = event.detail.value.location
+  //   let min_start_time = event.detail.value.min_start_time
+  //   let max_end_time = event.detail.value.max_end_time
+
+  //   let training = { title: title, price_per_hour: price_per_hour, location: location, min_start_time: min_start_time, max_end_time: max_end_time }
+
+  //   const url = app.globalData.url;
+  //   let id = this.data.id;
+  //   wx.request({
+  //     url: `${url}trainings`,
+  //     method: "POST",
+  //     data: training,
+  //     success() {
+  //       wx.redirectTo({
+  //         url: `../pages/trainings/show/show?id=${id}`
+  //       });
+  //     }
+  //   });   
+  // },
 
   /**
    * Lifecycle function--Called when page load
