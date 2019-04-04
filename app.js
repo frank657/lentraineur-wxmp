@@ -21,8 +21,8 @@ App ({
     })
   },
   globalData: {
-    // url: 'http://localhost:3000/api/v1/'
-    url: 'https://lentraineur.herokuapp.com/api/v1/'
+    url: 'http://localhost:3000/api/v1/'
+    // url: 'https://lentraineur.herokuapp.com/api/v1/'
   }
 })
 
