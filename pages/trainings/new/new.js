@@ -26,9 +26,9 @@ Page({
       method: "POST",
       data: training,
       success(res) {
-        console.log(res);
+        const id = res.data.id
         wx.redirectTo({
-          url: `../show/show?id=${res.data.id}`
+          url: `/pages/trainings/show/show?id=${id}`
         });
       }
     });
