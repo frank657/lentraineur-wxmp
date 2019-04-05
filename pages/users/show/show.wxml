@@ -11,16 +11,11 @@
 
   <!-- EDIT PROFILE ADD TRAINING BUTTONS -->
   <view class='card-menu-wrapper'>
-    <navigator url='../edit/edit?id={{user.id}}'>
-      <view class='card-menu'>
-        Edit Profile
-      </view>
-    </navigator>
-    <!-- <navigator url='../../trainings/create/create'> -->
-      <view class='card-menu' bindtap="addTraining">
-        Add Training
-      </view>
-    <!-- </navigator>    -->
+    <!-- <navigator url='../edit/edit?id={{user.id}}'> -->
+    <button class='btn-top' bindtap="editProfile">Edit Profile</button>
+    <!-- </navigator> -->
+
+    <button class='btn-top' bindtap='addTraining'>Add Training</button>
   </view>
 
   <!-- LIST OF TRAININGS -->
@@ -31,7 +26,8 @@
   <view class='section-training-list-wrapper'>
     <view class='section-training-list' wx:for="{{trainings}}" wx:for-item="training" wx:key="training.id" data-training="{{training}}">
       <view class='training-image'>
-        <image class="avatar-square" alt="avatar-bordered" src='https://images.unsplash.com/photo-1508215885820-4585e56135c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80'></image>
+        <!-- <image class="avatar-square" alt="avatar-bordered" src='https://images.unsplash.com/photo-1508215885820-4585e56135c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80'></image> -->
+        <image class="avatar-square" alt="avatar-bordered" src="{{training.image}}"></image>
       </view>
       <view class='training-content'>
         <view class='h2'>{{training.title}}</view>

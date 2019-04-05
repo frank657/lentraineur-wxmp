@@ -45,14 +45,15 @@ Page({
     console.log(training);
 
     const url = app.globalData.url;
+    const id = app.globalData.userId;
     wx.request({
       url: `${url}trainings`,
       method: "POST",
       data: training,
       success(res) {
-        const id = res.data.id
-        wx.redirectTo({
-          url: `/pages/trainings/show/show?id=${id}`
+        // const id = res.data.id
+        wx.switchTab({
+          url: `/pages/users/show/show?id=${id}`
         });
       }
     });
@@ -112,6 +113,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  cancelSubmit() {
+    const user_id = app.globalData.id
+
+    wx.switchTab({
+      url: `/pages/users/show/show?id=${user_id}`,
+    })
   }
 }) 
 

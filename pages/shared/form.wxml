@@ -11,7 +11,7 @@
     <!-- INPUT FIELDS -->
     <view><input class="user-input input-height" name= "title" value="{{title}}" placeholder="Title"></input></view>
     <view><input class="user-input input-height" name= "description" value="{{description}}" placeholder="Description"></input></view>
-    <view><input class="user-input input-height" name= "category" value="{{category_list}}" placeholder="Category"></input></view>
+    <view><input class="user-input input-height" name= "category" value="{{category_list.toString()}}" placeholder="Category"></input></view>
     <view><input class="user-input input-height" name="price_per_hour" value="{{price_per_hour}}" placeholder="Price/hour"></input></view>
     <view><input class="user-input input-height" name="location" value="{{location}}" placeholder="Location"></input></view>
 
@@ -27,8 +27,19 @@
       
     </view>
 
-    <!-- SUBMIT BUTTON -->
-    <button style="margin-bottom:20px" type="primary" formType="submit" loading="{{loading}}">Submit</button>
+    <view class='button-inline'>
+
+      
+      <!-- CANCEL BUTTON -->
+      <button class='btn-half' style="margin-bottom:20px" type="warn" bindtap="cancelSubmit">Cancel</button>
+
+      <!-- SUBMIT BUTTON -->
+      <button style="margin-bottom:20px" type="primary" formType="submit" loading="{{loading}}" class='btn-half'>Submit</button>
+
+
+    </view>
+    
+
   </form>
 </view>
 

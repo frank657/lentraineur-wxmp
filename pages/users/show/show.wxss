@@ -26,12 +26,17 @@
 
 .card-menu-wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   color: white;
-  /* background: black; */
-  text-align: center;
-  /* min-height: 150px; */
+}
+
+.btn-top {
+  width: 100%;
+  margin: 5px;
+  background-color: rgba(0,36,61,0.8);
+  /* background-color: rgba(0,101,168,0.6); */
+  color: #fff;
 }
 
 .card-menu {
