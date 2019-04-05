@@ -79,13 +79,33 @@ Page({
   },
   showModal(e) {
     console.log(e)
+    let user_id = app.globalData.userId
+    let schedule_id = e.target.dataset.schedule.id
+    let start_time = e.target.dataset.schedule.start_time
+    let end_time = e.target.dataset.schedule.end_time
+    // let total_price = e.target.dataset.schedule.total_price
+
+    let booking = {start_time: start_time, end_time: end_time, user_id: user_id}
+    const url = app.globalData.url;
     wx.showModal({
-      title: '提示',
-      content: '这是一个模态弹窗',
+      title: 'Confirm Booking',
+      content: 'Would you like to make this booking?',
+      cancelText: 'Cancel',
+      confirmText: 'Yes',
       success(res) {
         if (res.confirm) {
           console.log('用户点击确定')
-          console.log()
+          wx.request({
+            url: `${url}schedules/${schedule_id}/bookings`,
+            method: "POST",
+            data: booking,
+            success(res) {
+              // const id = res.data.id
+              wx.switchTab({
+                url: `/pages/bookings/index/index?id=${schedule_id}`
+              });
+            }
+          });
         } else if (res.cancel) {
           console.log('用户点击取消')
         }

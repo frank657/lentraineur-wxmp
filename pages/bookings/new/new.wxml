@@ -14,7 +14,7 @@
           <view><text class='bold'>Start:</text> {{schedule.start_time}}</view>
           <view><text class='bold'>End:</text> {{schedule.end_time}}</view>
         </view>
-        <view class="btn-flat" bindtap='showModal' data-schedule='{{schedule}}' name='schedule' value='{{schedule}}' >Book</view> 
+        <view class="btn-flat" bindtap='showModal' data-schedule='{{schedule}}' data-training='{{training}}'>Book</view> 
       </view>     
     </view>
   </view>
