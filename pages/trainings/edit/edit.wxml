@@ -4,6 +4,10 @@
 </view>
 <import src="../../shared/form.wxml"/>
 <template is="form" data="{{title: title, description: description, category: category_list, image: image, price_per_hour: price_per_hour, location: location}}"/>
+<!-- 
+<view>
+  <image src="/image/arrow-left.png" class='edit-icon'></image>
+</view> -->
 
 <view class='timeslot'>
   <view class='h2'>SCHEDULE</view>
@@ -12,8 +16,22 @@
   <!-- TIMESLOTS -->
   <view wx:for="{{schedules}}" wx:for-item="schedule" wx:key="schedule.id">
     <view class='schedule-card'>
-      Start: {{schedule.start_time}}
-      End: {{schedule.end_time}}    
+
+      <!-- ACTUAL SCHEDULE -->
+      <view class='schedule-time'>
+        <view><text class='bold'>Start:</text> {{schedule.start_time}}</view>
+        <view><text class='bold'>End:</text> {{schedule.end_time}}</view>  
+      </view> 
+
+      <!-- EDIT/DELETE -->
+      <view>
+        <image src="/image/edit.png" class="edit-icon" bindtap="editSchedule"
+          data-id="{{schedule.id}}"></image>
+      </view>
+       <view>
+        <image src="/image/delete.png" class="edit-icon" bindtap="deleteSchedule"
+          data-id="{{schedule.id}}"></image>
+      </view>
     </view>
 
   </view>
