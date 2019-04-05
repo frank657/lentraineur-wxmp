@@ -23,6 +23,7 @@
       <view class="btn-flat" bindtap='showModal' data-schedule='{{schedule}}' name='schedule' value='{{schedule}}'>Book</view> 
 
       <!-- end of schedule-card    -->
+
     </view>
   </view>
 </view>
