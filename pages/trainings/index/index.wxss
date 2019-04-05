@@ -1,4 +1,7 @@
 /* pages/trainings/index/index.wxss */
+
+/* Others */
+
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -12,6 +15,8 @@
   height: 100%;
   width: 220px;
   object-fit: cover;
+  /* background-size: cover;
+  background-position: center; */
 }
 
 .card-product h2 {
@@ -32,6 +37,9 @@
   padding: 16px;
 }
 
+
+/* Banner */
+
 .banner {
   color: white;
   text-align: center;
@@ -42,16 +50,29 @@
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-}
-
-.banner form {
-  border: 1px solid lightgrey;
-  border-radius: 5px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 .banner > text {
   margin-bottom: 20px;
 }
+
+/* Search bar */
+
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+
+/* Scroll */
 
 .scroll-view {
   margin-bottom: 15px;
@@ -69,6 +90,15 @@
   width: 150px;
   height: 150px;
 }
+
+.sports,
+.activities,
+.page {
+  z-index: 1;
+  position: relative;
+  top: 160px;
+}
+
 
 .bc_1 {
   margin-left: 15px;
@@ -90,4 +120,53 @@ card-activity {
   margin-left: 15px;
   margin-bottom: 10px;
 }
+
+/* Trainings */
+
+.weui-media-box {
+  height: 150px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.weui-media-box__hd {
+  width: 150px;
+  height: 150px;
+}
+
+.weui-media-box__hd > image {
+  width: 150px;
+  height: 150px;
+}
+
+.weui-panel__hd {
+  border-bottom: 1px solid black;
+  margin-left: 15px;
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.card-training {
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0,.06);
+  overflow: hidden;
+  height: 150px;
+}
+
+.weui-media-box__bd {
+  padding-right: 5px;
+}
+
+.weui-media-box__price {
+  position: absolute;
+  bottom: 10px;
+  font-size: 14px;
+}
+
+
+
 

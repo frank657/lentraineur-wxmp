@@ -1,4 +1,5 @@
 // pages/trainings/edit/edit.js
+const app = getApp();
 Page({
 
   /**
@@ -13,9 +14,21 @@ Page({
    */
   onLoad: function (options) {
     const page = this;
+    const url = app.globalData.url;
     page.setData({
       training_id: options.id
     });
+
+    wx.request({
+      // options.id is passed from data.id on edit link on show page
+      url: `${url}trainings/${options.id}`,
+      method: 'GET',
+      success(res) {
+        console.log('res', res);
+        const training = res.data;
+        page.setData(training);
+      }
+    })
 
   },
 

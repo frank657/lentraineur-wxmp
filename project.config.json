@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -50,29 +50,15 @@
 				},
 				{
 					"id": -1,
-					"name": "home",
-					"pathName": "pages/home/home",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "trainings-show",
-					"pathName": "pages/trainings/show/show",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "trainings_create",
+					"name": "Training New",
 					"pathName": "pages/trainings/new/new",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "schedules-new",
-					"pathName": "pages/schedules/new/new",
-					"query": "",
+					"name": "Training Edit",
+					"pathName": "pages/trainings/edit/edit",
 					"scene": null
 				}
 			]
