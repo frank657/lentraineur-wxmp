@@ -123,7 +123,11 @@
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{training.title}}</view>
               <view class="weui-media-box__desc">{{training.description}}</view>
-              <view class="weui-media-box__price"><text class='text-price'>¥{{training.price_per_hour}}</text><text class='text-hour' >/HOUR</text></view>
+              <view class="weui-media-box__price">
+                <!-- ¥{{training.price_per_hour}}/HOUR -->
+                <text class='text-price'>¥{{training.price_per_hour}}</text>
+                <text class='text-hour'>/HOUR</text>
+              </view>
             </view>
           </view>
         <!-- </navigator> -->

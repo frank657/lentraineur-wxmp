@@ -1,4 +1,6 @@
 // pages/bookings/index/index.js
+const app = getApp();
+
 Page({
 
   /**
@@ -12,6 +14,24 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+
+    console.log(options)
+
+    const page = this;
+    const url = app.globalData.url;
+    const user_id = app.globalData.userId;
+
+    wx.request({
+      url: `${url}bookings?user_id=${user_id}`,
+      method: 'GET',
+      success(res) {
+        console.log(res.data.bookings);
+        const bookings = res.data.bookings;
+        page.setData({
+          bookings: bookings
+        })
+      }
+    })
 
   },
 

@@ -1,2 +1,27 @@
 <!--pages/bookings/index/index.wxml-->
-<text>pages/bookings/index/index.wxml</text>
+  <!-- BANNER -->
+  <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1526403646408-57b94dc15399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+    
+    <view class="h1">My Bookings</view>
+  </view>
+
+<!-- <view class='section-training-list-header'>
+    <text class='h1'>My Bookings</text>
+</view> -->
+
+<view class='section-training-list-wrapper'>
+  <view class='section-training-list' wx:for="{{bookings}}" wx:for-item="booking" wx:key="booking.id" data-booking="{{booking}}">
+
+    <view class='training-content'>
+      <view class='h2'>{{booking.training.title}}</view>
+      <view class='p'>Start: {{booking.start_time}}</view> 
+      <view class='p'>End: {{booking.end_time}}</view>       
+    </view>
+
+    <view class='training-edit-delete'>
+      <image src="/image/edit.png" class="icon" bindtap="editTraining"
+    data-id="{{training.id}}"></image>
+    </view>
+    
+  </view>
+</view>
