@@ -102,7 +102,7 @@ Page({
             success(res) {
               // const id = res.data.id
               wx.switchTab({
-                url: `/pages/bookings/index/index?id=${schedule_id}`
+                url: `/pages/bookings/index/index?user_id=${user_id}`
               });
             }
           });

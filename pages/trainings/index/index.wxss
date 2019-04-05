@@ -162,7 +162,7 @@ card-activity {
 }
 
 .weui-media-box__price {
-  position: absolute;
+  /* position: absolute; */
   bottom: 10px;
   font-size: 14px;
 }
