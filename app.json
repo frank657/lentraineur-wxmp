@@ -6,10 +6,12 @@
     "pages/trainings/new/new",
     "pages/trainings/edit/edit",
     "pages/schedules/new/new",
+    "pages/schedules/edit/edit",
     "pages/users/show/show",
     "pages/users/edit/edit",
     "pages/reviews/index/index",
-    "pages/bookings/index/index"
+    "pages/bookings/index/index",
+    "pages/bookings/new/new"
   ],
   "window": {
     "backgroundTextStyle": "light",

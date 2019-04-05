@@ -104,7 +104,7 @@ Page({
       data: schedule,
       success(res) {
         wx.redirectTo({
-          url: `/pages/trainings/show/show?id=${page.data["training_id"]}`
+          url: `/pages/trainings/edit/edit?id=${page.data["training_id"]}`
         });
       }
     });

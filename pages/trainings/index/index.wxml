@@ -55,6 +55,7 @@
   </view>
 
 
+<<<<<<< HEAD
   <view class="activities">
     <view class="border">
       <text>Featured Activities</text>
@@ -66,6 +67,18 @@
             <image mode="aspectFill" src="https://images.unsplash.com/photo-1530915365347-e35b749a0381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></image>
             <text>Tennis Master</text>
           </view>
+=======
+<!-- <view class="activities">
+   <view class="border">
+    <text>Featured Activities</text>
+  </view>
+  <scroll-view class="scroll-view" scroll-x>
+    <view class='scroll-row'>
+      <view id="pic1" class="scroll-view-item_H bc_1">
+        <view class="card-sport">
+          <image mode="aspectFill" src="https://images.unsplash.com/photo-1530915365347-e35b749a0381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></image>
+          <text>Tennis Master</text>
+>>>>>>> 6a90dd1ebfd7c9f6d1bce3031bc8dcdb52146e6b
         </view>
         <view id="pic2"  class="scroll-view-item_H bc_2">
           <view class="card-sport">
@@ -86,9 +99,15 @@
           </view>
         </view>
       </view>
+<<<<<<< HEAD
     </scroll-view>
   </view>
 </view>
+=======
+    </view>
+  </scroll-view>
+</view> -->
+>>>>>>> 6a90dd1ebfd7c9f6d1bce3031bc8dcdb52146e6b
 
 <view class='page'>
   <view class='page__bd'>
@@ -96,18 +115,18 @@
      <view class='weui-panel__hd'>Trainings</view>
      <view class='weui-panel__bd'>
       <block wx:for='{{trainings}}' wx:for-item='training' wx:key='training.id'>
-        <navigator url="../show/show?id={{training.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-          <view class="card-training">
+        <!-- <navigator url="../show/show?id={{training.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active"> -->
+          <view class="card-training" bindtap="showTraining" data-id="{{training.id}}">
             <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
               <image src="{{training.image}}"></image>
             </view>
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{training.title}}</view>
               <view class="weui-media-box__desc">{{training.description}}</view>
-              <view class="weui-media-box__price">Price/h: {{training.price_per_hour}}</view>
+              <view class="weui-media-box__price"><text class='text-price'>¥{{training.price_per_hour}}</text><text class='text-hour' >/HOUR</text></view>
             </view>
           </view>
-        </navigator>
+        <!-- </navigator> -->
       </block>
       <view class="weui-panel__ft">
                 <view class="weui-cell weui-cell_access weui-cell_link">

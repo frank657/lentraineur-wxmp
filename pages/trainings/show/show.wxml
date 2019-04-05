@@ -1,41 +1,53 @@
 <!--pages/trainings/show/show.wxml-->
 <view class="section-main">
-  <view class='image-banner'></view>
-  <view class='text-title'>{{title}}</view>
-  <view class='text-description text-size'>{{description}}</view>
-  <view class='section-location'>
-    <view class='title-location'>The Location</view>
-    <view class='text-size'>{{location}}</view>
-    <view class='image-map'></view>
+  <view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.studyrama.com/IMG/arton1337.png');">
+    <text>{{title}}</text>
   </view>
 
-  <!-- reviews start -->
-  <view class="page section-reviews">
-    <view class="page__bd">
-        <view class="weui-panel weui-panel_access">
-          <view class="weui-panel__hd">Reviews</view>
-          <view class="weui-panel__bd">
-            <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__title weui-media-box__title_in-text text-size">
-                <block wx:for='{{reviews}}' wx:for-item='review' wx:key='review.id'>
-                  {{review.content}}
-                </block>
-              </view>
-              <view class="weui-media-box__desc">User {{reviews[0].id}}</view>
-            </view>
-          </view>
-        <navigator url="../../reviews/index/index?training_id={{id}}" class="weui-panel__ft">
-          <view class="weui-cell weui-cell_access weui-cell_link">
-            <view class="weui-cell__bd">Read all {{reviews.length}} reviews</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-          </view>
-        </navigator>
-      </view>
+  <view class='box'>
+    <!-- <view class='text-title'>{{title}}</view> -->
+    <view class='title-location'>Description</view>
+    <view class='text-description text-size'>{{description}}</view>
+    <view class='section-location'>
+      <view class='title-location'>The Location</view>
+      <view class='text-size'>{{location}}</view>
+      <view class='image-map'></view>
     </view>
   </view>
+  
+
+  <!-- reviews start -->
+  <view class='box'>
+  
+    <view class="page section-reviews">
+      <view class="page__bd">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">Reviews</view>
+            <view class="weui-panel__bd">
+              <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text text-size">
+                  <block wx:for='{{reviews}}' wx:for-item='review' wx:key='review.id'>
+                    {{review.content}}
+                  </block>
+                </view>
+                <view class="weui-media-box__desc">User {{reviews[0].id}}</view>
+              </view>
+            </view>
+          <navigator url="../../reviews/index/index?training_id={{id}}" class="weui-panel__ft">
+            <view class="weui-cell weui-cell_access weui-cell_link">
+              <view class="weui-cell__bd">Read all {{reviews.length}} reviews</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+
   <!-- reviews end -->
 </view>
-  
+
 
 <view id='footer'>
   <view>
@@ -44,7 +56,7 @@
     </view>
     <view>*****</view>
   </view>
-  <navigator url='../schedule/schedule' class="btn-flat picker">Check Availability</navigator>
+  <navigator url='../../bookings/new/new?training_id={{id}}' class="btn-flat picker">Check Availability</navigator>
   
 
 </view>

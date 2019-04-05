@@ -1,4 +1,4 @@
-// pages/trainings/show/show.js
+// pages/bookings/new/new.js
 const app = getApp();
 Page({
 
@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-  
+
   },
 
   /**
@@ -15,13 +15,16 @@ Page({
   onLoad: function (options) {
     const page = this;
     const url = app.globalData.url;
+    console.log(22, options)
     wx.request({
-      url: `${url}trainings/${options.id}`,
+      url: `${url}trainings/${options.training_id}`,
       method: 'GET',
       success(res) {
         const training = res.data;
-        page.setData(training)
-        console.log(11, training)
+        page.setData({
+          training: training
+        })
+        console.log(66, training)
       }
     })
   },
@@ -36,22 +39,8 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function (options) {
-    const page = this;
-    const url = app.globalData.url;
+  onShow: function () {
 
-    console.log('onShow options', options)
-    // wx.request({
-    //   url: `${url}trainings/${options.id}`,
-    //   method: 'GET',
-    //   success(res) {
-    //     const training = res.data;
-    //     page.setData({
-    //       training: training
-    //     })
-    //     console.log(12, training)
-    //   }
-    // })
   },
 
   /**
@@ -88,20 +77,39 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  showCalendar(e) {
+  showModal(e) {
     console.log(e)
+    let user_id = app.globalData.userId
+    let schedule_id = e.target.dataset.schedule.id
+    let start_time = e.target.dataset.schedule.start_time
+    let end_time = e.target.dataset.schedule.end_time
+    // let total_price = e.target.dataset.schedule.total_price
+
+    let booking = {start_time: start_time, end_time: end_time, user_id: user_id}
+    const url = app.globalData.url;
     wx.showModal({
-      title: '提示',
-      content: '这是一个模态弹窗',
+      title: 'Confirm Booking',
+      content: 'Would you like to make this booking?',
+      cancelText: 'Cancel',
+      confirmText: 'Yes',
       success(res) {
         if (res.confirm) {
           console.log('用户点击确定')
+          wx.request({
+            url: `${url}schedules/${schedule_id}/bookings`,
+            method: "POST",
+            data: booking,
+            success(res) {
+              // const id = res.data.id
+              wx.switchTab({
+                url: `/pages/bookings/index/index?id=${schedule_id}`
+              });
+            }
+          });
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
       }
     })
   }
-
 })
