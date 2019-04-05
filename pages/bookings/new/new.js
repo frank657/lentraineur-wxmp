@@ -1,4 +1,4 @@
-// pages/trainings/show/show.js
+// pages/bookings/new/new.js
 const app = getApp();
 Page({
 
@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-  
+
   },
 
   /**
@@ -15,15 +15,16 @@ Page({
   onLoad: function (options) {
     const page = this;
     const url = app.globalData.url;
+    console.log(22, options)
     wx.request({
-      url: `${url}trainings/${options.id}`,
+      url: `${url}trainings/${options.training_id}`,
       method: 'GET',
       success(res) {
         const training = res.data;
         page.setData({
           training: training
         })
-        console.log(11, training)
+        console.log(66, training)
       }
     })
   },
@@ -76,8 +77,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  showCalendar(e) {
+  showModal(e) {
     console.log(e)
     wx.showModal({
       title: '提示',
@@ -85,11 +85,11 @@ Page({
       success(res) {
         if (res.confirm) {
           console.log('用户点击确定')
+          console.log()
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
       }
     })
   }
-
 })

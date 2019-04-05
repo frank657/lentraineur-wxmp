@@ -44,7 +44,7 @@
     </view>
     <view>*****</view>
   </view>
-  <navigator url='../schedule/schedule' class="btn-flat picker">Check Availability</navigator>
+  <navigator url='../../bookings/new/new?training_id={{training.id}}' class="btn-flat picker">Check Availability</navigator>
   
 
 </view>
