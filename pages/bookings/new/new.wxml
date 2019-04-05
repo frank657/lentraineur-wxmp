@@ -1,9 +1,21 @@
 <!--pages/bookings/new/new.wxml-->
-<text>pages/bookings/new/new.wxml</text>
 
-<block wx:for='{{training.schedules}}' wx:for-item='schedule' wx:key='training.id'>
-  <text>______________</text>
-  <view>Start time: {{schedule.start_time}}</view>
-  <view>End time: {{schedule.end_time}}</view>
-  <text>______________</text>
-</block>
+<view class='timeslot'>
+  <view class='h2'>SCHEDULE</view>
+
+
+  <!-- TIMESLOTS -->
+  <view wx:for="{{training.schedules}}" wx:for-item="schedule" wx:key="schedule.id">
+    <view class='schedule-card'>
+
+      <!-- ACTUAL SCHEDULE -->
+      <view class='schedule-time'>
+        <view>
+          <view><text class='bold'>Start:</text> {{schedule.start_time}}</view>
+          <view><text class='bold'>End:</text> {{schedule.end_time}}</view>
+        </view>
+        <view class="btn-flat" bindtap='showModal' data-schedule='{{schedule}}' name='schedule' value='{{schedule}}' >Book</view> 
+      </view>     
+    </view>
+  </view>
+</view>

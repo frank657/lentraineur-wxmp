@@ -77,10 +77,19 @@ Page({
   onShareAppMessage: function () {
 
   },
-  bindPickerChange: function (e) {
-    console.log('picker send selection modified. The carry value is ', e.detail.value)
-    this.setData({
-      index: e.detail.value
+  showModal(e) {
+    console.log(e)
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          console.log()
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
   }
 })
