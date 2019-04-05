@@ -6,14 +6,29 @@ Page({
    * Page initial data
    */
   data: {
-
+   
   },
+
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+      const self = this
+      wx.loadFontFace({
+        family: this.data.fontFamily,
+        source: 'url("https://sungd.github.io/Pacifico.ttf")',
+        success(res) {
+          console.log(res.status)
+          self.setData({ loaded: true })
+        },
+        fail: function (res) {
+          console.log(res.status)
+        },
+        complete: function (res) {
+          console.log(res.status)
+        }
+      });
   },
 
   getUserInfo: function (e) {
