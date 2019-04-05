@@ -95,8 +95,8 @@
      <view class='weui-panel__hd'>Trainings</view>
      <view class='weui-panel__bd'>
       <block wx:for='{{trainings}}' wx:for-item='training' wx:key='training.id'>
-        <navigator url="../show/show?id={{training.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-          <view class="card-training">
+        <!-- <navigator url="../show/show?id={{training.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active"> -->
+          <view class="card-training" bindtap="showTraining" data-id="{{training.id}}">
             <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
               <image src="{{training.image}}"></image>
             </view>
@@ -106,7 +106,7 @@
               <view class="weui-media-box__price"><text class='text-price'>¥{{training.price_per_hour}}</text><text class='text-hour' >/HOUR</text></view>
             </view>
           </view>
-        </navigator>
+        <!-- </navigator> -->
       </block>
       <view class="weui-panel__ft">
                 <view class="weui-cell weui-cell_access weui-cell_link">
