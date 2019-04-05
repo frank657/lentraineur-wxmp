@@ -20,9 +20,7 @@ Page({
       method: 'GET',
       success(res) {
         const training = res.data;
-        page.setData({
-          training: training
-        })
+        page.setData(training)
         console.log(11, training)
       }
     })
@@ -38,8 +36,22 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onShow: function (options) {
+    const page = this;
+    const url = app.globalData.url;
 
+    console.log('onShow options', options)
+    // wx.request({
+    //   url: `${url}trainings/${options.id}`,
+    //   method: 'GET',
+    //   success(res) {
+    //     const training = res.data;
+    //     page.setData({
+    //       training: training
+    //     })
+    //     console.log(12, training)
+    //   }
+    // })
   },
 
   /**

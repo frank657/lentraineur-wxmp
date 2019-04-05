@@ -1,12 +1,51 @@
-/* pages/bookings/new/new.wxss */
+/* pages/trainings/edit/edit.wxss */
+/* pages/trainings/new/new.wxss */
 
-.schedule-card {
-  margin: 10px 0px;
-  border-bottom: solid 1px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: space-between;
+.h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Banner */
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 150px;
+  background-size: cover !important;
   align-items: center;
-  padding-right: 5px;
+  justify-content: center;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  /* z-index: 2; */
+  width: 100%;
+}
+
+.h2-header {
+ color: black;
+  font-size: 40rpx; 
+  font-weight: bold;
+  padding: 15px;}
+
+.box {
+  padding: 5px 20px;
+  /* width: 100%; */
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  padding: 0px 20px;
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 .timeslot {
@@ -17,15 +56,40 @@
   padding: 5px 20px;
 }
 
-.btn-flat {
-  color: white;
-  padding: 12px 8px;
-  border-radius: 4px;
-  background: #1EDD88;
-  font-size: 12px;
+.schedule-card {
+  margin: 10px 0px;
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+/* 
+.schedule-time {
+  flex-grow: 1;
+} */
+
+.schedule-btn {
+  margin-bottom: 20px;
 }
 
-.schedule-time {
-  display: flex;
-  align-content: space-between;
+.bold {
+  font-weight: bold;
+}
+
+.edit-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-flat {
+  /* width: 100%; */
+  padding:8px 20px;
+  border-radius:4px;
+  margin: 5px;
+  font-weight: bold;
+  /* background-color: rgba(0,36,61,0.8); */
+  background-color: #1EDD88;
+  /* background-color: rgba(0,101,168,0.6); */
+  color: #fff;
 }

@@ -139,5 +139,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  showTraining(e) {
+    console.log(e);
+    const id = e.currentTarget.dataset.id
+    console.log('id', id);
+
+    wx.navigateTo({
+      url: `/pages/trainings/show/show?id=${id}`,
+    })
   }
 })
