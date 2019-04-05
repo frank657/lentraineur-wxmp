@@ -15,6 +15,7 @@ Page({
         );
       }
     })
+   
   },
   /**
    * Page initial data
@@ -23,7 +24,9 @@ Page({
     toView: 'pic1',
     scrollTop: 100, 
     inputShowed: false,
-    inputVal: ""
+    inputVal: "",
+    trueStatement: true,
+    falseStatement: false
   },
 
   showInput: function () {

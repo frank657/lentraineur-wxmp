@@ -1,2 +1,11 @@
 <!--pages/home/home.wxml-->
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" data-id="{{globalData.userId}}" data-user-info="{{globalData.userInfo}}">Login</button>
+
+<view class="container" mode= "aspectFill" style="background-position: center; background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,0.8) 0%, rgba(95,209,249,0.8) 100.2% ), url('https://images.unsplash.com/photo-1509027572446-af8401acfdc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80');">
+  <textarea> Find a new Training Today!</textarea>
+  <view class="card">
+    <image class="profile" mode="aspectFill" src="https://i.pinimg.com/564x/1b/c7/f8/1bc7f86c3881d32b0d1aa0abbb537fb0.jpg"></image>
+    <button class="button" open-type="getUserInfo" bindgetuserinfo="getUserInfo" data-id="{{globalData.userId}}" data-user-info="{{globalData.userInfo}}">Login</button>
+  </view>
+</view>
+
+
