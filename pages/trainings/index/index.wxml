@@ -55,7 +55,7 @@
 </view>
 
 
-<view class="activities">
+<!-- <view class="activities">
    <view class="border">
     <text>Featured Activities</text>
   </view>
@@ -87,7 +87,7 @@
       </view>
     </view>
   </scroll-view>
-</view>
+</view> -->
 
 <view class='page'>
   <view class='page__bd'>
@@ -103,7 +103,7 @@
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{training.title}}</view>
               <view class="weui-media-box__desc">{{training.description}}</view>
-              <view class="weui-media-box__price">Price/h: {{training.price_per_hour}}</view>
+              <view class="weui-media-box__price"><text class='text-price'>¥{{training.price_per_hour}}</text><text class='text-hour' >/HOUR</text></view>
             </view>
           </view>
         </navigator>

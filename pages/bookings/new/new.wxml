@@ -1,0 +1,9 @@
+<!--pages/bookings/new/new.wxml-->
+<text>pages/bookings/new/new.wxml</text>
+
+<block wx:for='{{training.schedules}}' wx:for-item='schedule' wx:key='training.id'>
+  <text>______________</text>
+  <view>Start time: {{schedule.start_time}}</view>
+  <view>End time: {{schedule.end_time}}</view>
+  <text>______________</text>
+</block>
