@@ -1,16 +1,18 @@
 // pages/trainings/new/new.js
 const app = getApp();
- const AV = require('../../../utils/av-weapp-min.js');
+const AV = require('../../../utils/av-weapp-min.js');
 
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
     photoUrl: ''
   },
-
+  saveFile: function(f){
+    let page = this;
+    let savedFile = f.url()
+    page.setData({
+      savedFile: savedFile
+    })
+  },
   takePhoto: function () {
     let page = this;
     wx.chooseImage({
@@ -20,17 +22,23 @@ Page({
       success: function (res) {
         let tempFilePath = res.tempFilePaths[0];
         page.setData({ photoUrl: res.tempFilePaths[0]});
+        console.log(page)
         new AV.File('file-name', {
           blob: {
             uri: tempFilePath,
           },
         }).save().then(
-          file => console.log(file.url())
+          file => page.saveFile(file)
         ).catch(console.error);
       } 
     });
   },
-
+  previewMyImage: function (files) {
+    wx.previewImage({
+      current: '',  // number of index or file path
+      urls: files  // Array of temp files
+    })
+  },
   formSubmit: function (event) {
     let title = event.detail.value.title
     let description = event.detail.value.description
@@ -41,8 +49,6 @@ Page({
     let category = event.detail.value.category
 
     let training = { title: title, description: description, price_per_hour: price_per_hour, location: location,  user_id: user_id, image: image, category_list: category }
-
-    console.log(training);
 
     const url = app.globalData.url;
     wx.request({
